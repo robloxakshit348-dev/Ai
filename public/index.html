@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en" data-theme="dark"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#07080f">
+<meta name="description" content="OmniAI — free AI chat, coding assistant, document analysis and image prompt studio in one beautiful workspace.">
+<meta name="omniai-api" content="api.php"><meta name="omniai-bootstrap" content="bootstrap.php">
+<title>OmniAI — All your AI tools, one workspace</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"><script src="theme.js"></script>
+</head><body>
+<div class="bg" aria-hidden="true"><span class="orb o1"></span><span class="orb o2"></span><span class="orb o3"></span><span class="grid"></span></div>
+<svg width="0" height="0" class="sprite" aria-hidden="true"><defs>
+<symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></symbol>
+<symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+<symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="1.8"/><path d="m21 15-4.5-4.5L6 21"/></symbol>
+<symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></symbol>
+<symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></symbol>
+<symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1z"/></symbol>
+<symbol id="i-crown" viewBox="0 0 24 24"><path d="M3 8l4 4 5-7 5 7 4-4-2 11H5z"/></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+<symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 13A9 9 0 1 1 11 3a7 7 0 0 0 10 10z"/></symbol>
+<symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+</defs></svg>
+
+<div class="shell">
+<aside class="sidebar">
+ <a class="brand" href="./"><span class="brandmark"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 12 52 48H41L32 31 23 48H12z"/></svg></span><span class="brandtext">Omni<span class="grad">AI</span><small>YOUR AI UNIVERSE</small></span></a>
+ <p class="navlabel">Workspace</p>
+ <button class="nav active" data-view="home" type="button"><svg class="ic"><use href="#i-home"/></svg><span>Overview</span></button>
+ <button class="nav" data-view="chat" type="button"><svg class="ic"><use href="#i-chat"/></svg><span>AI Chat</span></button>
+ <button class="nav" data-view="image" type="button"><svg class="ic"><use href="#i-image"/></svg><span>Image Studio</span></button>
+ <button class="nav" data-view="docs" type="button"><svg class="ic"><use href="#i-doc"/></svg><span>Documents</span></button>
+ <button class="nav" data-view="code" type="button"><svg class="ic"><use href="#i-code"/></svg><span>AI Coding</span></button>
+ <button class="nav" data-view="prompts" type="button"><svg class="ic"><use href="#i-book"/></svg><span>Prompt Library</span></button>
+ <p class="navlabel">Plans</p>
+ <button class="nav" data-view="pricing" type="button"><svg class="ic"><use href="#i-crown"/></svg><span>Plans &amp; Credits</span></button>
+ <div class="sidebar-bottom"><div class="usagecard"><div class="usagehead"><b>Free today</b><span id="usageText">—</span></div><div class="bar"><i id="usageBar"></i></div><small>Free AI models · No sign-up</small></div></div>
+</aside>
+
+<main class="main">
+ <header class="topbar"><a class="mobile-brand" href="./"><span class="brandmark sm"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 12 52 48H41L32 31 23 48H12z"/></svg></span>Omni<span class="grad">AI</span></a><span class="crumb">Workspace <i>/</i> <b id="crumb">Overview</b></span>
+ <div class="topright"><span class="planpill" id="usagePill">Free</span><button class="iconbtn" id="themeBtn" type="button" aria-label="Toggle light and dark theme"><svg class="ic"><use id="themeIcon" href="#i-sun"/></svg></button><button class="iconbtn only-mobile" data-view="pricing" type="button" aria-label="Plans"><svg class="ic"><use href="#i-crown"/></svg></button></div></header>
+
+ <div class="content">
+ <div class="notice hidden" id="keyNotice" role="alert"><b>Setup needed:</b> add your OpenRouter API key on the server to turn on AI features (see README).</div>
+
+ <section class="view show" id="view-home">
+  <div class="herohead"><p class="eyebrow">Your creative workspace</p><h1>Your ideas.<br><span class="grad">Powered by AI.</span></h1><p class="sub">Create, think, build and learn with free AI tools — chat, code, documents and image prompts in one place.</p></div>
+  <div class="hero glass"><div class="heroglow" aria-hidden="true"></div><p class="eyebrow">AI assistant</p><h2>What will you create today?</h2>
+   <div class="askrow"><input id="homeAsk" placeholder="Ask OmniAI anything…" maxlength="2000" aria-label="Ask OmniAI"><button class="button" id="homeSend" type="button">Ask <svg class="ic"><use href="#i-arrow"/></svg></button></div>
+   <div class="chips"><button type="button" data-suggest="Explain quantum computing simply">Explain a topic</button><button type="button" data-suggest="Write a professional email asking my manager for a day off">Write an email</button><button type="button" data-suggest="Create a startup business plan for a local food delivery app">Build a business</button><button type="button" data-suggest="Give me 5 creative side project ideas for a beginner developer">Project ideas</button></div></div>
+  <div class="sectionhead"><h3>AI tools</h3><span>Free to use · No sign-up</span></div>
+  <div class="tools">
+   <button class="tool t1" type="button" data-open="chat"><i><svg class="ic"><use href="#i-chat"/></svg></i><b>AI Chat</b><small>Your intelligent assistant</small></button>
+   <button class="tool t2" type="button" data-open="image"><i><svg class="ic"><use href="#i-image"/></svg></i><b>Image Studio</b><small>Craft perfect image prompts</small></button>
+   <button class="tool t3" type="button" data-open="docs"><i><svg class="ic"><use href="#i-doc"/></svg></i><b>Documents</b><small>Summarize and analyze text</small></button>
+   <button class="tool t4" type="button" data-open="code"><i><svg class="ic"><use href="#i-code"/></svg></i><b>AI Coding</b><small>Build and debug faster</small></button>
+  </div>
+  <div class="sectionhead"><h3>Popular prompts</h3><button class="link" type="button" data-open="prompts">Explore library <svg class="ic"><use href="#i-arrow"/></svg></button></div><div id="homePrompts" class="promptgrid"></div>
+ </section>
+
+ <section class="view" id="view-chat"><div class="titlerow"><div><p class="eyebrow">OmniAI assistant</p><h2>AI Chat</h2></div><button class="button secondary small" id="clearChat" type="button"><svg class="ic"><use href="#i-plus"/></svg> New chat</button></div>
+  <div class="chatbox glass"><div id="messages" class="messages" aria-live="polite"></div>
+  <div class="composer"><textarea id="chatInput" rows="1" maxlength="8000" placeholder="Message OmniAI…" aria-label="Message"></textarea><button class="button sendbtn" id="chatSend" type="button" aria-label="Send message"><svg class="ic"><use href="#i-send"/></svg></button></div>
+  <p class="tiny center">Free AI models can make mistakes — double-check important facts. Please don't share passwords or private data. <span class="hint">Enter to send · Shift+Enter for a new line</span></p></div></section>
+
+ <section class="view" id="view-image"><p class="eyebrow">Creative studio</p><h2>Image Studio</h2><p class="sub" id="imageSub">Turn a rough idea into polished, copy-ready prompts for any image generator.</p>
+  <div class="card glass"><label for="imagePrompt">Describe your image</label><textarea id="imagePrompt" rows="4" maxlength="2000" placeholder="A futuristic city floating above the clouds, cinematic lighting…"></textarea>
+  <label for="imageStyle">Style</label><select id="imageStyle"><option value="">Any style</option><option>Photorealistic</option><option>Cinematic</option><option>Anime</option><option>3D render</option><option>Watercolor</option><option>Minimal flat vector</option></select>
+  <button class="button full" id="makeImage" type="button"><svg class="ic"><use href="#i-spark"/></svg> Create</button><div id="imageResult" class="output md hidden"></div></div></section>
+
+ <section class="view" id="view-docs"><p class="eyebrow">Document workspace</p><h2>Document AI</h2><p class="sub">Upload a text file and let AI work with it. Files are read in your browser and never stored.</p>
+  <div class="card glass"><label for="docFile">Choose a .txt or .md file</label><input type="file" id="docFile" accept=".txt,.md,text/plain,text/markdown"><label for="docAction">What should OmniAI do?</label><select id="docAction"><option>Summarize this document</option><option>Extract key points</option><option>Explain this in simple language</option><option>Create questions and answers</option></select>
+  <button class="button full" id="analyzeDoc" type="button"><svg class="ic"><use href="#i-spark"/></svg> Analyze document</button><div id="docResult" class="output md hidden"></div><p class="tiny">Plain text / Markdown only, up to 2 MB. Very long files are trimmed so the free model can handle them.</p></div></section>
+
+ <section class="view" id="view-code"><p class="eyebrow">Developer workspace</p><h2>AI Coding Assistant</h2><p class="sub">Generate, explain, refactor and debug code.</p>
+  <div class="card glass"><label for="codeLang">Programming language</label><select id="codeLang"><option>HTML, CSS and JavaScript</option><option>PHP</option><option>Python</option><option>JavaScript</option><option>Node.js</option><option>React</option><option>SQL</option></select>
+  <label for="codePrompt">Describe what you want to build</label><textarea id="codePrompt" rows="5" maxlength="6000" placeholder="Create a responsive login page with validation…"></textarea>
+  <button class="button full" id="generateCode" type="button"><svg class="ic"><use href="#i-spark"/></svg> Generate code</button><div id="codeResult" class="output md hidden"></div><button class="button secondary hidden" id="copyCode" type="button">Copy response</button></div></section>
+
+ <section class="view" id="view-prompts"><p class="eyebrow">Library</p><h2>Prompt Library</h2><p class="sub">Ready-made prompts you can use in one click, plus your own saved prompts (stored privately in this browser).</p>
+  <input class="search" id="promptSearch" placeholder="Search prompts…" aria-label="Search prompts"><div class="filters"><button class="filter active" type="button" data-cat="All">All</button><button class="filter" type="button" data-cat="Business">Business</button><button class="filter" type="button" data-cat="Coding">Coding</button><button class="filter" type="button" data-cat="Writing">Writing</button><button class="filter" type="button" data-cat="Creative">Creative</button><button class="filter" type="button" data-cat="Mine">My prompts</button></div>
+  <div id="promptList" class="promptgrid"></div>
+  <div class="card glass sharecard"><h3>Save your own prompt</h3><label for="newTitle">Title</label><input id="newTitle" maxlength="140" placeholder="e.g. Product description expert"><label for="newCategory">Category</label><select id="newCategory"><option>Business</option><option>Coding</option><option>Writing</option><option>Creative</option><option>General</option></select><label for="newBody">Prompt text</label><textarea id="newBody" rows="4" maxlength="6000" placeholder="Act as an expert…"></textarea><button class="button" id="publishPrompt" type="button">Save prompt</button></div></section>
+
+ <section class="view" id="view-pricing"><p class="eyebrow center">Simple plans · Powerful AI</p><h2 class="center">Choose your OmniAI plan</h2><p class="sub center">Start free. Upgrade when you're ready.</p>
+  <div class="pricing"><article class="pricecard glass"><h3>Free</h3><strong>₹0 <small>/ month</small></strong><p>Explore your AI workspace.</p><ul><li id="freeLimitItem">Daily free AI requests</li><li>Free AI models</li><li>Prompt library</li><li>Text document analysis</li></ul><span class="current">Current plan</span></article>
+  <article class="pricecard glass featured"><span class="badge">Coming soon</span><h3>Pro</h3><strong>₹499 <small>/ month</small></strong><p>For creators and power users.</p><ul><li>Higher usage limits</li><li>Premium models</li><li>Image generation credits</li><li>Advanced coding tools</li></ul><button class="button full" id="proPlan" type="button">Notify me</button></article>
+  <article class="pricecard glass"><h3>Team</h3><strong>Custom</strong><p>AI collaboration at scale.</p><ul><li>Shared workspaces</li><li>Team management</li><li>Centralized billing</li><li>API credit options</li></ul><button class="button secondary full" id="teamPlan" type="button">Contact sales</button></article></div>
+  <p class="tiny center">Paid plans are display-only for now. The site currently runs entirely on free AI models.</p></section>
+ <footer><span class="grad">OmniAI</span> · One platform. Infinite possibilities.</footer>
+ </div>
+ <div id="toast" class="toast hidden" role="status"></div>
+</main></div>
+
+<nav class="tabbar" aria-label="Main">
+ <button class="tab active" data-view="home" type="button"><svg class="ic"><use href="#i-home"/></svg><span>Home</span></button>
+ <button class="tab" data-view="chat" type="button"><svg class="ic"><use href="#i-chat"/></svg><span>Chat</span></button>
+ <button class="tab" data-view="image" type="button"><svg class="ic"><use href="#i-image"/></svg><span>Image</span></button>
+ <button class="tab" data-view="docs" type="button"><svg class="ic"><use href="#i-doc"/></svg><span>Docs</span></button>
+ <button class="tab" data-view="code" type="button"><svg class="ic"><use href="#i-code"/></svg><span>Code</span></button>
+ <button class="tab" data-view="prompts" type="button"><svg class="ic"><use href="#i-book"/></svg><span>Prompts</span></button>
+</nav>
+<script src="app.js"></script>
+</body></html>

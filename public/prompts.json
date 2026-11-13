@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Professional email writer",
+    "category": "Business",
+    "body": "Act as an executive communications coach. Write a clear, polite, professional email about the topic I give you. Keep it under 150 words and include a subject line."
+  },
+  {
+    "title": "Startup business plan",
+    "category": "Business",
+    "body": "Act as a startup advisor. Create a one-page business plan for my idea: problem, solution, target customers, revenue model, costs, marketing plan and the first 30-day action list."
+  },
+  {
+    "title": "Product description expert",
+    "category": "Business",
+    "body": "Act as a conversion copywriter. Write a persuasive product description with a headline, 3 benefit bullets and a call to action for the product I describe."
+  },
+  {
+    "title": "Code reviewer",
+    "category": "Coding",
+    "body": "Act as a senior engineer. Review the code I paste for bugs, security issues, performance problems and readability. List issues by severity and show a fixed version."
+  },
+  {
+    "title": "Explain this error",
+    "category": "Coding",
+    "body": "I will paste an error message and the related code. Explain what the error means in simple words, the most likely cause, and give step-by-step fixes."
+  },
+  {
+    "title": "SQL query helper",
+    "category": "Coding",
+    "body": "Act as a database expert. Turn my plain-English request into an optimized SQL query, explain how it works and mention any indexes that would help."
+  },
+  {
+    "title": "Blog post outline",
+    "category": "Writing",
+    "body": "Act as an SEO content strategist. Create a detailed blog post outline with a catchy title, intro hook, H2/H3 headings, key points and a conclusion for the topic I give you."
+  },
+  {
+    "title": "Rewrite in simple language",
+    "category": "Writing",
+    "body": "Rewrite the text I paste so a 12-year-old can understand it. Keep the meaning, shorten long sentences and avoid jargon."
+  },
+  {
+    "title": "Proofread and polish",
+    "category": "Writing",
+    "body": "Proofread the text I paste. Fix grammar, spelling and flow, keep my voice, then list the main changes you made."
+  },
+  {
+    "title": "Story starter",
+    "category": "Creative",
+    "body": "Write the opening scene (about 250 words) of a short story in the genre I choose, with a vivid setting, an intriguing character and a hook that makes readers want more."
+  },
+  {
+    "title": "Brand name ideas",
+    "category": "Creative",
+    "body": "Suggest 15 memorable brand names for my business, grouped by style (modern, playful, premium). Add a one-line tagline for your top 3."
+  },
+  {
+    "title": "Study plan builder",
+    "category": "General",
+    "body": "Act as a learning coach. Build a 4-week study plan for the subject and daily time I give you, with weekly goals, resources to look for and a self-test at the end."
+  }
+]
