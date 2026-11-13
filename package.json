@@ -1,0 +1,16 @@
+{
+  "name": "omniai",
+  "version": "2.0.0",
+  "description": "OmniAI — free AI chat, coding, documents and image prompt studio. Express server for Render + PHP build for InfinityFree. No database.",
+  "main": "server.js",
+  "private": true,
+  "license": "MIT",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test test/ai.test.js",
+    "build:infinityfree": "node scripts/make-infinityfree.js"
+  },
+  "dependencies": { "express": "^4.21.2" }
+}

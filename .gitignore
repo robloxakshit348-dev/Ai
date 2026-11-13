@@ -1,0 +1,8 @@
+node_modules/
+.env
+.env.*
+!.env.example
+dist/
+php/config.local.php
+php/storage/*.cnt
+.DS_Store

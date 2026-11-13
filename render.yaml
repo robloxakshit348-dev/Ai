@@ -1,0 +1,24 @@
+# Render Blueprint: Dashboard -> New + -> Blueprint -> pick this repo.
+# Render asks for the values marked "sync: false" (paste them there; never commit keys).
+services:
+  - type: web
+    name: omniai
+    runtime: node
+    plan: free
+    buildCommand: npm install --omit=dev
+    startCommand: npm start
+    healthCheckPath: /healthz
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: OPENROUTER_API_KEY
+        sync: false          # optional: site also runs on the keyless backup AI
+      - key: OPENROUTER_API_KEYS
+        sync: false          # optional: spare keys, comma-separated
+      - key: OPENROUTER_MODELS
+        value: "nvidia/nemotron-3-ultra-550b-a55b:free,openrouter/free"
+      - key: KEYLESS_FALLBACK
+        value: "true"
+      - key: DAILY_FREE_MESSAGES
+        value: "30"
